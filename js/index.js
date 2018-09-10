@@ -117,11 +117,18 @@ function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
 
-function DoorClosed(){
+function doorClosed(){
 alert("The door is closed")
 }
 
-function DoorOpened(){
+function doorOpened(){
 	alert("The door is opened")
 }
-	
+
+function showStatusOpen(){
+	document.getElementById("output").innerHTML = "The door is open";	
+}
+
+function showStatusClosed() {
+	document.getElementById("output").innerHTML = "The door is closed";	
+}
