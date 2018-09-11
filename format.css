@@ -19,7 +19,7 @@ img{
 	
 }	
 #messageInput{
-	
+	display:none;
 }
 #list{
 	background-color: red;
