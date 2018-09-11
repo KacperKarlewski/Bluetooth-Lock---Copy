@@ -34,8 +34,7 @@ var deviceList =[];
  
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
-    bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
-	window.location.href = "test.html";
+    bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling	
 }
 
 function onDeviceReady(){
@@ -76,6 +75,7 @@ function conn(){
 	ConnDeviceId = deviceTouchArr[1];
 	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	ble.connect(ConnDeviceId, onConnect, onConnError);
+	window.location.href = "test.html";
  }
  
  //succes
