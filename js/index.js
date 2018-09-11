@@ -35,6 +35,7 @@ var deviceList =[];
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
     bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
+	window.location.href = "test.html";
 }
 
 function onDeviceReady(){
@@ -63,6 +64,7 @@ function onDiscoverDevice(device){
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
+
 	}
 }
 
@@ -131,4 +133,8 @@ function showStatusOpen(){
 
 function showStatusClosed() {
 	document.getElementById("output").innerHTML = "The door is closed";	
+}
+
+function goToPage() {
+	window.location.href = "";
 }
