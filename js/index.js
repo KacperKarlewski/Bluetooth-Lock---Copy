@@ -121,19 +121,19 @@ function onError(reason)  {
 }
 
 function doorClosed(){
-alert("The door is closed")
+alert("The door is locked")
 }
 
 function doorOpened(){
-	alert("The door is opened")
+	alert("The door is unlocked")
 }
 
 function showStatusOpen(){
-	document.getElementById("output").innerHTML = "The door is open";	
+	document.getElementById("output").innerHTML = "The door is unlocked";	
 }
 
 function showStatusClosed() {
-	document.getElementById("output").innerHTML = "The door is closed";	
+	document.getElementById("output").innerHTML = "The door is locked";	
 }
 
 function goToPage() {
