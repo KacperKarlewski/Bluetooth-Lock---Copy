@@ -13,13 +13,13 @@
     </head>
      <body onload="onLoad()">
 
-		<h1>Bluifruit test</h1>
-           
+		<center><h1>Bluifruit test</h1></center>
+        <center><img id="lock"  width = "180" height = "180"></center>
 		<p id="output"></p>	
 		<br><br>
-		<button id="openButton" onclick = "data('1'); sendData(); doorOpened(); showStatusOpen()">Tryk for at åbne</button>
+		<button id="openButton" onclick = "addPictureUnlocked() ; data('1'); sendData(); doorOpened(); showStatusOpen() ">Tryk for at åbne</button>
 		<br><br>
-		<button id="closeButton" onclick = "data('0'); sendData() ; doorClosed() ; showStatusClosed()">Tryk for at låse</button>
+		<button id="closeButton" onclick = "addPictureLocked(); data('0'); sendData() ; doorClosed() ; showStatusClosed()">Tryk for at låse</button>
 		<br><br><br>
 		<input type="text" id="messageInput" value="Hello"/>
 		<br>		

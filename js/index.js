@@ -139,3 +139,12 @@ function showStatusClosed() {
 function goToPage() {
 	window.location.href = "openclose.html";
 }
+
+function addPictureUnlocked(){
+	document.getElementById("lock").src = "unlocked.png";
+}
+
+function addPictureLocked(){
+		document.getElementById("lock").src = "locked.png";
+	
+}
