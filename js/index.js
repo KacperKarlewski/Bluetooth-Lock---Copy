@@ -83,7 +83,7 @@ function onConnect(){
 	document.getElementById("statusDiv").innerHTML = " Status: Connected";
 	document.getElementById("bleId").innerHTML = ConnDeviceId;
 	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
-	window.location.href = "openclose.html";
+	window.open("openclose.html");
 }
 
 //failure
@@ -137,5 +137,5 @@ function showStatusClosed() {
 }
 
 function goToPage() {
-	window.location.href = "";
+	window.location.href = "openclose.html";
 }
