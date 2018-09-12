@@ -121,7 +121,7 @@ function onError(reason)  {
 }
 
 function doorClosed(){
-	if (conn == true){
+	if (conn() == true){
 	alert("The door is locked")
 	}
 }
