@@ -121,8 +121,8 @@ function onError(reason)  {
 }
 
 function doorClosed(){
-	if (onConnect == true){
-	alert("The door is locked")
+	if (onError == false){
+	notification.alert("The door is locked")
 	document.getElementById("output").innerHTML = "The door is locked";
 	document.getElementById("lock").src = "lock2.png";
 	}else{
@@ -131,8 +131,8 @@ function doorClosed(){
 }
 
 function doorOpened(){
-	if (onConnect() == true){
-	alert("The door is unlocked")
+	if (onError == false){
+	notification.alert("The door is unlocked")
 	document.getElementById("output").innerHTML = "The door is unlocked";
 	document.getElementById("lock").src = "lock1.png";
 	}else{
@@ -160,3 +160,4 @@ function addPictureLocked(){
 		document.getElementById("lock").src = "lock2.png";
 	
 }
+
