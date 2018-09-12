@@ -121,7 +121,7 @@ function onError(reason)  {
 }
 
 function doorClosed(){
-	if (conn() == true){
+	if (onConnect == true){
 	alert("The door is locked")
 	document.getElementById("output").innerHTML = "The door is locked";
 	document.getElementById("lock").src = "lock2.png";
@@ -131,7 +131,7 @@ function doorClosed(){
 }
 
 function doorOpened(){
-	if (conn() == true){
+	if (onConnect() == true){
 	alert("The door is unlocked")
 	document.getElementById("output").innerHTML = "The door is unlocked";
 	document.getElementById("lock").src = "lock1.png";

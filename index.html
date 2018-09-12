@@ -17,9 +17,9 @@
         <center><img id="lock" ></center>
 		<center><p id="output"></p></center>	
 		<br><br>
-		<button id="openButton" onclick = "data('1'); sendData(); doorOpened()">Tryk for at åbne</button>
+		<button id="openButton" onclick = "doorOpened(); data('1'); sendData()">Tryk for at åbne</button>
 		<br><br>
-		<button id="closeButton" onclick = "data('0'); sendData() ; doorClosed()">Tryk for at låse</button>
+		<button id="closeButton" onclick = "doorClosed();data('0'); sendData()">Tryk for at låse</button>
 		<br><br><br>
 		<input type="text" id="messageInput" value="Hello"/>
 		<br>		
