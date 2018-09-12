@@ -141,10 +141,10 @@ function goToPage() {
 }
 
 function addPictureUnlocked(){
-	document.getElementById("lock").src = "unlocked.png";
+	document.getElementById("lock").src = "lock1.png";
 }
 
 function addPictureLocked(){
-		document.getElementById("lock").src = "locked.png";
+		document.getElementById("lock").src = "lock2.png";
 	
 }
