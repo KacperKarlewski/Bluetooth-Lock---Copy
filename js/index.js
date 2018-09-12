@@ -123,11 +123,17 @@ function onError(reason)  {
 function doorClosed(){
 	if (conn() == true){
 	alert("The door is locked")
+	}else{
+	alert("You are not connected")
 	}
 }
 
 function doorOpened(){
+	if (conn() == true){
 	alert("The door is unlocked")
+	}else{
+	alert("You are not connected")
+	}
 }
 
 function showStatusOpen(){
