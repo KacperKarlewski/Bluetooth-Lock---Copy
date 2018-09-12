@@ -83,7 +83,7 @@ function onConnect(){
 	document.getElementById("statusDiv").innerHTML = " Status: Connected";
 	document.getElementById("bleId").innerHTML = ConnDeviceId;
 	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
-	
+	document.getElementById("buttons").innerHTML = "block";
 }
 
 //failure
@@ -120,24 +120,12 @@ function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
 
-function doorClosed(){
-	if (onError == false){
+function doorClosed(){	
 	notification.alert("The door is locked")
-	document.getElementById("output").innerHTML = "The door is locked";
-	document.getElementById("lock").src = "lock2.png";
-	}else{
-	alert("You are not connected")
-	}
 }
 
 function doorOpened(){
-	if (onError == false){
-	notification.alert("The door is unlocked")
-	document.getElementById("output").innerHTML = "The door is unlocked";
-	document.getElementById("lock").src = "lock1.png";
-	}else{
-	alert("You are not connected")
-	}
+	notification.alert("The door is unlocked")	
 }
 
 function showStatusOpen(){
@@ -157,7 +145,7 @@ function addPictureUnlocked(){
 }
 
 function addPictureLocked(){
-		document.getElementById("lock").src = "lock2.png";
-	
+		document.getElementById("lock").src = "lock2.png";	
 }
 
+switch 
