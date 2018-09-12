@@ -123,6 +123,8 @@ function onError(reason)  {
 function doorClosed(){
 	if (conn() == true){
 	alert("The door is locked")
+	document.getElementById("output").innerHTML = "The door is locked";
+	document.getElementById("lock").src = "lock2.png";
 	}else{
 	alert("You are not connected")
 	}
@@ -131,6 +133,8 @@ function doorClosed(){
 function doorOpened(){
 	if (conn() == true){
 	alert("The door is unlocked")
+	document.getElementById("output").innerHTML = "The door is unlocked";
+	document.getElementById("lock").src = "lock1.png";
 	}else{
 	alert("You are not connected")
 	}
