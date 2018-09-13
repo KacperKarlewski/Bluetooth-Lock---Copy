@@ -76,6 +76,7 @@ function conn(){
 	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	ble.connect(ConnDeviceId, onConnect, onConnError);
 	
+	}
  }
  
  //succes
@@ -83,7 +84,6 @@ function onConnect(){
 	document.getElementById("statusDiv").innerHTML = " Status: Connected";
 	document.getElementById("bleId").innerHTML = ConnDeviceId;
 	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
-	document.getElementById("buttons").innerHTML = "none";
 }
 
 //failure
@@ -121,11 +121,11 @@ function onError(reason)  {
 }
 
 function doorClosed(){	
-	notification.alert("The door is locked")
+	notification.alert("The door is locked");
 }
 
 function doorOpened(){
-	notification.alert("The door is unlocked")	
+	notification.alert("The door is unlocked");
 }
 
 function showStatusOpen(){
@@ -147,5 +147,3 @@ function addPictureUnlocked(){
 function addPictureLocked(){
 		document.getElementById("lock").src = "lock2.png";	
 }
-
-switch 
