@@ -77,7 +77,7 @@ function conn(){
 	ble.connect(ConnDeviceId, onConnect, onConnError);
 	
 	}
- }
+ 
  
  //succes
 function onConnect(){
