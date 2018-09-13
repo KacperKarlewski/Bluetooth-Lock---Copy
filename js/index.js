@@ -145,11 +145,15 @@ function goToPage() {
 }
 
 function addPictureUnlocked(){
+	if(onData() == "0"){
 	document.getElementById("lock").src = "lock1.png";
+	}
 }
 
 function addPictureLocked(){
+	if(onData() == "180"){
 		document.getElementById("lock").src = "lock2.png";	
+}
 }
 
 
