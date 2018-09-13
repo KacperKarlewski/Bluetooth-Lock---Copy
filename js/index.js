@@ -129,11 +129,15 @@ function doorOpened(){
 }
 
 function showStatusOpen(){
+	if(onData() == "0"){
 	document.getElementById("output").innerHTML = "The door is unlocked";	
+}
 }
 
 function showStatusClosed() {
+	if(onData() == "180"){
 	document.getElementById("output").innerHTML = "The door is locked";	
+	}
 }
 
 function goToPage() {
@@ -147,3 +151,5 @@ function addPictureUnlocked(){
 function addPictureLocked(){
 		document.getElementById("lock").src = "lock2.png";	
 }
+
+
