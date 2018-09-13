@@ -33,6 +33,7 @@ var ConnDeviceId;
 var deviceList =[];
  
 function onLoad(){
+	hide();
 	document.addEventListener('deviceready', onDeviceReady, false);
     bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
 }
@@ -78,6 +79,7 @@ function conn(){
  
  //succes
 function onConnect(){
+	showButtons();
 	document.getElementById("statusDiv").innerHTML = " Status: Connected";
 	document.getElementById("bleId").innerHTML = ConnDeviceId;
 	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
@@ -129,15 +131,14 @@ function doorOpened(){
 }
 
 function showStatusOpen(){
-	if(onData(0)){
 	document.getElementById("output").innerHTML = "The door is unlocked";	
 }
-}
+
 
 function showStatusClosed() {
-	if(onData(180)){
+	
 	document.getElementById("output").innerHTML = "The door is locked";	
-	}
+	
 }
 
 function goToPage() {
@@ -145,15 +146,32 @@ function goToPage() {
 }
 
 function addPictureUnlocked(){
-	if(onData(0)){
 	document.getElementById("lock").src = "lock1.png";
-	}
 }
 
 function addPictureLocked(){
-	if(onData(180)){
-		document.getElementById("lock").src = "lock2.png";	
+		document.getElementById("lock").src = "lock2.png";
+		
 }
+/*
+function showButtons() {
+	x = document.getElementById("buttons");
+	if (onConnect === "true"){
+		x.style.display = "block";
+	}else{
+		x.style.display = "none";
+	}
 }
+*/
 
+function showButtons() {
+	var x = document.getElementById("buttons");
+	
+		x.style.display = "block";
+}
+	
+function hide(){
+	var x = document.getElementById("buttons");
+		x.style.display = "none";
+}
 
