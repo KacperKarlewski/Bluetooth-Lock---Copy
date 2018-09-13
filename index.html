@@ -14,6 +14,15 @@
      <body onload="onLoad()">
 
 		<center><h1>Bluifruit test</h1></center>
+		<ul id="bleDeviceList"> </ul>  
+		<button id="refreshButton" onclick = "refreshDeviceList()">Refresh</button>
+		<br>
+		<div id="statusDiv">Status: Disconnected</div>
+		<div id="bleId">DeviceId:</div>
+		<div id="debugDiv"></div>
+		<div id="sendDiv"></div>
+		<br><br>
+		<button id="disconnectButton"onclick="disconnect()">Disconnect</button>
         <center><img id="lock" ></center>
 		<center><p id="output"></p></center>	
 		<br><br>		
@@ -24,15 +33,7 @@
 		<input type="text" id="messageInput" value="Hello"/>
 		<br>					
 		<br>
-		<ul id="bleDeviceList"> </ul>  
-		<button id="refreshButton" onclick = "refreshDeviceList()">Refresh</button>
-		<br>
-		<div id="statusDiv">Status: Disconnected</div>
-		<div id="bleId">DeviceId:</div>
-		<div id="debugDiv"></div>
-		<div id="sendDiv"></div>
-		<br><br>
-		<button id="disconnectButton"onclick="disconnect()">Disconnect</button>
+		
 		<div id="receiveDiv"></div>
     </body>
 </html>

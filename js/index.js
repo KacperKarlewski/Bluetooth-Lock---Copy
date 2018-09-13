@@ -34,7 +34,7 @@ var deviceList =[];
  
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
-    bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling	
+    bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
 }
 
 function onDeviceReady(){
@@ -63,7 +63,6 @@ function onDiscoverDevice(device){
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
-
 	}
 }
 
@@ -75,9 +74,7 @@ function conn(){
 	ConnDeviceId = deviceTouchArr[1];
 	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	ble.connect(ConnDeviceId, onConnect, onConnError);
-	
-	}
- 
+ }
  
  //succes
 function onConnect(){
@@ -120,12 +117,15 @@ function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
 
+	
+
+
 function doorClosed(){	
-	notification.alert("The door is locked");
+	alert("The door is locked");
 }
 
 function doorOpened(){
-	notification.alert("The door is unlocked");
+	alert("The door is unlocked");
 }
 
 function showStatusOpen(){
