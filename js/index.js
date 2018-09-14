@@ -123,11 +123,13 @@ function onError(reason)  {
 	
 
 
-function doorClosed(){	
+function doorLocked(){	
+	onData('180');
 	alert("The door is locked");
 }
 
-function doorOpened(){
+function doorUnlocked(){
+	onData('0');
 	alert("The door is unlocked");
 }
 

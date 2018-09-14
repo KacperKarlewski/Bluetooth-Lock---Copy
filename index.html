@@ -28,9 +28,9 @@
 			<center><img id="lock" ></center>
 			<center><p id="output"></p></center>	
 			<br><br>		
-			<button id="openButton" onclick = "doorOpened() ; data('1') ; sendData() ; showStatusOpen() ; addPictureUnlocked()">Tryk for at låse op</button>
+			<button id="openButton" onclick = "data('1') ; sendData() ; doorUnlocked() ; showStatusOpen() ; addPictureUnlocked()">Tryk for at låse op</button>
 			<br><br>
-			<button id="closeButton" onclick = "doorClosed() ; data('0') ; sendData() ; showStatusClosed() ; addPictureLocked()">Tryk for at låse</button>		
+			<button id="closeButton" onclick = "data('0') ; sendData() ; doorLocked() ; showStatusClosed() ; addPictureLocked()">Tryk for at låse</button>		
 		</div>
 		
 		<br><br><br>
