@@ -180,7 +180,3 @@ function hideChoose() {
 	var x = document.getElementById("choose");
 		x.style.display = "none";
 }
-
-function showChoose() {
-	var x = document.getElementById("choose");
-		x.style.display = "block";
