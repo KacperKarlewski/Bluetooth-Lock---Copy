@@ -14,7 +14,7 @@
      <body onload="onLoad()">
 
 		<center><h1>Bluifruit test</h1></center>
-		<h1>Vælg en bluetooth enhed</h1>
+		<div id = "choose"><h1>Vælg en bluetooth enhed</h1></div>
 		<ul id="bleDeviceList"> </ul>  
 		<button id="refreshButton" onclick = "refreshDeviceList()">Refresh</button>
 		<br>
@@ -28,7 +28,7 @@
 			<center><img id="lock" ></center>
 			<center><p id="output"></p></center>	
 			<br><br>		
-			<button id="openButton" onclick = "doorOpened(); data('1'); sendData(); showStatusOpen(); addPictureUnlocked()">Tryk for at åbne</button>
+			<button id="openButton" onclick = "doorOpened(); data('1'); sendData(); showStatusOpen(); addPictureUnlocked()">Tryk for at låse op</button>
 			<br><br>
 			<button id="closeButton" onclick = "doorClosed(); data('0'); sendData(); showStatusClosed(); addPictureLocked()">Tryk for at låse</button>		
 		</div>

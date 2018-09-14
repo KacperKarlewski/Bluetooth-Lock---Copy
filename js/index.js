@@ -79,6 +79,7 @@ function conn(){
  
  //succes
 function onConnect(){
+	hideChoose();
 	showButtons();
 	document.getElementById("statusDiv").innerHTML = " Status: Connected";
 	document.getElementById("bleId").innerHTML = ConnDeviceId;
@@ -175,3 +176,11 @@ function hide(){
 		x.style.display = "none";
 }
 
+function hideChoose() {
+	var x = document.getElementById("choose");
+		x.style.display = "none";
+}
+
+function showChoose() {
+	var x = document.getElementById("choose");
+		x.style.display = "block";
