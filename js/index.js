@@ -154,21 +154,12 @@ function addPictureLocked(){
 		document.getElementById("lock").src = "lock2.png";
 		
 }
-/*
-function showButtons() {
-	x = document.getElementById("buttons");
-	if (onConnect === "true"){
-		x.style.display = "block";
-	}else{
-		x.style.display = "none";
-	}
-}
-*/
+
 
 function showButtons() {
 	var x = document.getElementById("buttons");
 	
-		x.style.display = "block";
+		x.style.display = "inline";
 }
 	
 function hide(){
