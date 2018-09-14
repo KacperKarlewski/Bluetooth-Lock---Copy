@@ -124,13 +124,15 @@ function onError(reason)  {
 
 
 function doorLocked(){	
-	onData('180');
+	if (onData(data == "180")){
 	alert("The door is locked");
+	}
 }
 
 function doorUnlocked(){
-	onData('0');
+	if (onData(data == "0")){
 	alert("The door is unlocked");
+	}
 }
 
 function showStatusOpen(){
